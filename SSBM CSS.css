@@ -1,0 +1,213 @@
+body {
+    background-image: url(Imgs/CSS\ Background.jpg);
+    background-size: cover;
+}
+#flexus {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+#flexus h1 {
+    grid-column: span 2;
+    justify-self: center;
+    margin-bottom: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: linear-gradient(to bottom, black, black, rgb(147, 147, 224));
+    font-size: 30px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.5px white;
+}
+#SSBM {
+    grid-column: span 2;
+    justify-self: center;
+    width: 30vw;
+}
+.CSS {
+    display: grid;
+    grid-column: span 2;
+    justify-self: center;
+    grid-template-columns: repeat(9, 4vw);
+    grid-auto-flow: row;
+    grid-template-rows: repeat(3, 4vw);
+    grid-template-areas: 
+    'a b c d e f g h i'
+    'j k l m n o p q r'
+    '. s t u v w x y .';
+    margin-bottom: 40px;
+}
+.CSSpng {
+    width: 4vw;
+    height: 4vw;
+    transition: all 0.1s;
+}
+.CSSpng:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0 0 20px white;
+}
+.CSS1 { grid-area:a ;}
+.CSS2 { grid-area:b ;}
+.CSS3 { grid-area:c ;}
+.CSS4 { grid-area:d ;}
+.CSS5 { grid-area:e ;}
+.CSS6 { grid-area:f ;}
+.CSS7 { grid-area:g ;}
+.CSS8 { grid-area:h ;}
+.CSS9 { grid-area:i ;}
+.CSS10 { grid-area:j ;}
+.CSS11 { grid-area:k ;}
+.CSS12 { grid-area:l ;}
+.CSS13 { grid-area:m ;}
+.CSS14 { grid-area:n ;}
+.CSS15 { grid-area:o ;}
+.CSS16 { grid-area:p ;}
+.CSS17 { grid-area:q ;}
+.CSS18 { grid-area:r ;}
+.CSS19 { grid-area:s ;}
+.CSS20 { grid-area:t ;}
+.CSS21 { grid-area:u ;}
+.CSS22 { grid-area:v ;}
+.CSS23 { grid-area:w ;}
+.CSS24 { grid-area:x ;}
+.CSS25 { grid-area:y ;}
+
+#selectedchar {
+    justify-self: center;
+    position: relative;
+    margin-left: 17vw;
+}
+#selectedchar button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    margin: 5px;
+    display: none;
+}
+#selectedchar button:hover {
+    cursor: pointer;
+}
+#selectedchar button:focus {
+    outline: none;
+}
+#selectedchar div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+#selectedchar span {
+    color: white;
+    font-weight: 400;
+}
+#portrait {
+    width: 14vw;
+}
+#vol {
+    display: flex;
+    justify-self: center;
+    margin-left: 17vw;
+}
+#vol img {
+
+    margin-right: 10px;
+}
+#volume {
+    width: 10vw;
+}
+#keyboard {
+    justify-self: start;
+    margin-left: 7vw;
+}
+h3 {
+    color: rgb(238, 212, 212);
+    justify-self: center;
+    text-shadow: 2px 2px black;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+#soundboard {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-gap: 3px;
+    width: auto;
+}
+.sbuttons {
+    width: 50px;
+    height: 50px;
+    transition: all 0.1s;
+    background-color: darkred;
+    cursor: pointer;
+}
+.playing, .sbuttons:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 25px white;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none !important;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .CSS {
+        grid-template-columns: repeat(9, 8vw);
+        grid-template-rows: repeat(3, 8vw);
+    }
+    .CSSpng {
+        width: 8vw;
+        height: 8vw;
+    }
+    #SSBM {
+        width: 40vw;
+    }
+    #soundboard {
+        grid-template-columns: repeat(8, 5vw);
+        margin-right: 10vw;
+    }
+    h3 {
+        margin-right: 10vw;
+    }
+    .sbuttons {
+        width: 5vw;
+        height: 5vw;
+    }
+    #portrait {
+        width: 20vw;
+    }
+    #selectedchar {
+        margin-left: 0;
+    }
+    #vol {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1700px) and (min-width: 1001px) {
+    #portrait {
+        width: 17vw;
+    }
+    .CSS {
+        grid-template-columns: repeat(9, 6vw);
+        grid-template-rows: repeat(3, 6vw);
+    }
+    .CSSpng {
+        width: 6vw;
+        height: 6vw;
+    }
+    #soundboard {
+        grid-template-columns: repeat(8, 4vw);
+        margin-right: 20vw;
+    }
+    h3 {
+        margin-right: 20vw;
+    }
+    .sbuttons {
+        width: 4vw;
+        height: 4vw;
+    }
+}
