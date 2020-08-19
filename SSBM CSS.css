@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
 body {
     background-image: url(Imgs/CSS\ Background.jpg);
     background-size: cover;
@@ -152,6 +155,23 @@ h3 {
     display: none !important;
 }
 
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Alata', sans-serif;
+}
+
+footer a{
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(218, 101, 101);
+}
+
+footer span {
+    font-family: 'Quicksand', sans-serif;
+}
 
 @media screen and (max-width: 1000px) {
     .CSS {
