@@ -115,6 +115,11 @@ let main = () => {
     };
 }
 
+for (let i = 1; i < 42; i++) {
+    let a = document.createElement('audio');
+    a.classList.add(`audiofile${i}`, 'audiofiles');
+    document.body.appendChild(a);
+}
 main();
 zs();
 function removeTransition(e) {
