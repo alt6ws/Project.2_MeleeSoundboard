@@ -123,7 +123,7 @@ for (let i = 1; i < 42; i++) {
 main();
 zs();
 function removeTransition(e) {
-    if(e.propertyName == 'transform' || e.propertyName == 'outline-color')
+    if(e.propertyName == 'transform')
     this.classList.remove('playing');
     else return;
 }

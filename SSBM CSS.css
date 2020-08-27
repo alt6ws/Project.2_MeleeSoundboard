@@ -144,7 +144,7 @@ h3 {
     background-color: darkred;
     cursor: pointer;
 }
-.playing, .sbuttons:hover {
+.playing{
     transform: scale(1.3);
     box-shadow: 0 0 25px white;
 }
