@@ -28,13 +28,16 @@ let assignAudios = (value, character) => {
     }  
     for (let i = 0; i < value; i++) {
         audios[i].setAttribute("src",`Melee Character Sounds/${character}/${character}${i + 1}.wav`);       // for every audio element (up to the number of audio files), setAttribute src of audio
-        buttons[i].addEventListener('click',() => 
+        buttons[i].addEventListener('mousedown',() => 
         {
             audios[i].volume = volume.value;                                                                // on button click, play audio
             audios[i].currentTime = 0;
             audios[i].play()
             buttons[i].classList.add('playing');
         });                                                               // set div text, rework later
+        buttons[i].addEventListener('mouseup', () => {
+          buttons[i].classList.remove('playing');
+        });
         buttons[i].classList.toggle('show');                                                                // show the divs
     }
     for (let j = value; j < 41; j++) {
@@ -65,6 +68,10 @@ window.addEventListener('keydown', e => {                                       
     keybutton.classList.add('playing');
 });
 
+window.addEventListener('keyup', e => {
+  const keybutton = document.querySelector(`button[data-key='${e.keyCode}']`);
+  keybutton.classList.remove('playing');
+})
 
 let mainX = value => {
     CSSpngs[value].addEventListener('click', () => { 
@@ -122,12 +129,6 @@ for (let i = 1; i < 42; i++) {
 }
 main();
 zs();
-function removeTransition(e) {
-    if(e.propertyName == 'transform')
-    this.classList.remove('playing');
-    else return;
-}
-buttons.forEach(key => key.addEventListener('transitionend', removeTransition))
 
 
 
